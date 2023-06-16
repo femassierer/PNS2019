@@ -1,0 +1,434 @@
+---
+title: "DAG-PNS-1"
+author: "Helal L, Ribeiro-Lucas R"
+date: '`r Sys.Date()`'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#### Abstract
+
+Hi there - this is the first version of our PNS 2019 project- did by Rafaela and
+myself.
+
+Please note that variables as gray are for mediation analysis inside the
+upstream variable. Confounders are marked in red- as standard of daggity.net.
+This is a v0 for start discussion about our modeling.
+
+Below is the DAG code for R - `dagitty` package and all files are deposited in
+`github.com/lhelal1/pns2019`.
+
+Cheers!
+
+
+#### Variables
+
+testImplications \<- function covariance.matrix- sample.size
+
+libraryggm
+
+tst \<- functioni pcor.test pcori-covariance.matrix- lengthi-2-
+sample.sizerendapvalue
+
+tos \<- functioni pastei-collapse=
+
+implications \<- list
+
+
+-   anos-escolaridade-sedentarismo
+
+-   anos-escolaridade-ang-iam-ic-avc
+
+-   anos-escolaridade-tempo-de-diagnostico
+
+-   saude-auto-ref-apoio-religdm2-M2-morbidades
+
+-   saude-auto-ref-apoio-religimc-M2-morbidades
+
+-   saude-auto-ref-apoio-religreum-M2-morbidades
+
+-   saude-auto-ref-apoio-religM1-sociodemomorbidades
+
+-   saude-auto-ref-apoio-religsex-M1-sociodemo
+
+-   saude-auto-ref-apoio-religsex-sociodemomorbidades
+
+-   saude-auto-ref-apoio-religage-M1-sociodemo
+
+-   saude-auto-ref-apoio-religage-sociodemomorbidades
+
+-   saude-auto-ref-apoio-religinc-M1-sociodemo
+
+-   saude-auto-ref-apoio-religinc-sociodemomorbidades
+
+-   saude-auto-ref-apoio-religstat-mar-M1-sociodemo
+
+-   saude-auto-ref-apoio-religstat-mar-sociodemomorbidades
+
+-   saude-auto-ref-apoio-religeducation-M1-sociodemo
+
+-   saude-auto-ref-apoio-religeducation-sociodemomorbidades
+
+-   saude-auto-ref-apoio-religlive-alone-M1-sociodemo
+
+-   saude-auto-ref-apoio-religlive-alone-morbidadessociodemo
+
+-   saude-auto-ref-apoio-religauto-rel-saude
+
+-   saude-auto-ref-apoio-religapgar-
+
+-   saude-auto-ref-apoio-religreligiao-
+
+-   dor-M2-morbidadessociodemosaude-auto-ref-apoio-relig
+
+-   dor-tdm-M2-morbidades
+
+-   dor-tdm-sociodemosaude-auto-ref-apoio-religmorbidades
+
+-   dor-dm2-M2-morbidades
+
+-   dor-dm2-morbidadessociodemosaude-auto-ref-apoio-relig
+
+-   dor-imc-M2-morbidades
+
+-   dor-imc-morbidadessociodemosaude-auto-ref-apoio-relig
+
+-   dor-reum-M2-morbidades
+
+-   dor-reum-morbidadessociodemosaude-auto-ref-apoio-relig
+
+-    dor-M1-sociodemomorbidades dor-sex-M1-sociodemo
+
+-   dor-sex-sociodemomorbidades dor-age-M1-sociodemo
+
+-   dor-age-sociodemomorbidades dor-inc-M1-sociodemo
+
+-   dor-inc-sociodemomorbidades dor-stat-mar-M1-sociodemo
+
+-   dor-stat-mar-sociodemomorbidades dor-education-M1-sociodemo
+
+-   dor-education-sociodemomorbidades dor-live-alone-M1-sociodemo
+
+-   dor-live-alone-morbidadessociodemo
+
+-   dor-auto-rel-saudeM3-saude-auto-ref-apoio-relig
+
+-   dor-apgar-M3-saude-auto-ref-apoio-relig
+
+-   dor-religiao-M3-saude-auto-ref-apoio-relig
+
+-   M3-morbidadessaude-auto-ref-apoio-relig
+
+-   M3-M2-saude-auto-ref-apoio-relig
+
+-   M3-tdm-M2-morbidades
+
+-   M3-tdm-saude-auto-ref-apoio-relig
+
+-   M3-dm2-M2-morbidades
+
+-   M3-dm2-saude-auto-ref-apoio-relig
+
+-   M3-imc-M2-morbidades
+
+-   M3-imc-saude-auto-ref-apoio-relig
+
+-   M3-reum-M2-morbidades
+
+-   M3-reum-saude-auto-ref-apoio-relig
+
+-   M3-sociodemosaude-auto-ref-apoio-relig
+
+-   M3-M1-sociodemomorbidades
+
+-   M3-M1-saude-auto-ref-apoio-relig
+
+-   M3-sex-M1-sociodemo
+
+-   M3-sex-sociodemomorbidades
+
+-   M3-sex-saude-auto-ref-apoio-relig
+
+-   M3-age-M1-sociodemo
+
+-   M3-age-sociodemomorbidades
+
+-   M3-age-saude-auto-ref-apoio-relig
+
+-   M3-inc-M1-sociodemo
+
+-   M3-inc-sociodemomorbidades
+
+-   M3-inc-saude-auto-ref-apoio-relig
+
+-   M3-stat-mar-M1-sociodemo
+
+-   M3-stat-mar-sociodemomorbidades
+
+-   M3-stat-mar-saude-auto-ref-apoio-relig
+
+-   M3-education-M1-sociodemo
+
+-   M3-education-sociodemomorbidades
+
+-   M3-education-saude-auto-ref-apoio-relig
+
+-   M3-live-alone-M1-sociodemo
+
+-   M3-live-alone-morbidadessociodemo
+
+-   M3-live-alone-saude-auto-ref-apoio-relig
+
+-   morbidadestdm- morbidadesdm2-
+
+-   morbidadesimc- morbidadesreum-
+
+-   morbidadessex-M1-sociodemo
+
+-   morbidadesage-M1-sociodemo
+
+-   morbidadesinc-M1-sociodemo
+
+-   morbidadesstat-mar-M1-sociodemo
+
+-   morbidadeseducation-M1-sociodemo
+
+-   morbidadeslive-alone-M1-sociodemo
+
+-   morbidadesauto-rel-saude
+
+-   morbidadesapgar-
+
+-   morbidadesreligiao-
+
+-   M2-sociodemomorbidades
+
+-   M2-M1-morbidades
+
+-   M2-sex-M1-sociodemo
+
+-   M2-sex-morbidades
+
+-   M2-age-M1-sociodemo
+
+-   M2-age-morbidades
+
+-   M2-inc-M1-sociodemo
+
+-   M2-inc-morbidades
+
+-   M2-stat-mar-M1-sociodemo
+
+-   M2-stat-mar-morbidades
+
+-   M2-education-M1-sociodemo
+
+-   M2-education-morbidades
+
+-   M2-live-alone-M1-sociodemo
+
+-   M2-live-alone-morbidades
+
+-   M2-auto-rel-saude
+
+-   M2-apgar
+
+-   M2-religiao
+
+-   tdm-dm2
+
+-   tdm-imc
+
+-   tdm-reum
+
+-   tdm-sociodemo
+
+-   tdm-M1
+
+-   tdm-sex
+
+-   tdm-age
+
+-   tdm-inc
+
+-   tdm-stat-mar
+
+-   tdm-education
+
+-   tdm-live-alone
+
+-   tdm-auto-rel-saude
+
+-   tdm-apgar
+
+-   tdm-religiao
+
+-   dm2-imc
+
+-   dm2-reum
+
+-   dm2-sociodemo
+
+-   dm2-M1
+
+-   dm2-sex
+
+-   dm2-age
+
+-   dm2-inc
+
+-   dm2-stat-mar
+
+-   dm2-education
+
+-   dm2-live-alone
+
+-   dm2-auto-rel-saude
+
+-   dm2-apgar
+
+-   dm2-religiao
+
+-   imc-reum
+
+-   imc-sociodemo
+
+-   imc-M1
+
+-   imc-sex
+
+-   imc-age
+
+-   imc-inc
+
+-   imc-stat-mar
+
+-   education
+
+-   imc-live-alone
+
+-   imc-auto-rel-saude
+
+-   imc-apgar
+
+-   imc-religiao
+
+-   reum-sociodemo
+
+-   reum-M1
+
+-   reum-sex
+
+-   reum-age
+
+-   reum-inc
+
+-   reum-stat-mar
+
+-   reum-education
+
+-   reum-live-alone
+
+-   reum-auto-rel-saude
+
+-   reum-apgar
+
+-   reum-religiao
+
+-   sociodemosex
+
+-   sociodemoage
+
+-   sociodemoinc
+
+-   sociodemostat-mar
+
+-   sociodemoeducation
+
+-   sociodemolive-alone
+
+-   sociodemoauto-rel-saude
+
+-   sociodemoapgar
+
+-   sociodemoreligiao-
+
+-   M1-auto-rel-saude
+
+-   M1-apgar- M1-religiao
+
+-   sex-age
+
+-   sex-inc
+
+-   sex-stat-mar
+
+-   sex-education
+
+-   sex-live-alone
+
+-   sex-auto-rel-saude
+
+-   sex-apgar
+
+-   sex-religiao
+
+-   age-inc
+
+-   age-stat-mar-
+
+-   age-education-
+
+-   age-live-alone-
+
+-   age-auto-rel-saude
+
+-   age-apgar-
+
+-   age-religiao-
+
+-   inc-stat-mar-
+
+-   inc-education-
+
+-   inc-live-alone-
+
+-   inc-auto-rel-saude
+
+-   inc-apgar-
+
+-   inc-religiao-
+
+-   stat-mar-education-
+
+-   stat-mar-live-alone-
+
+-   stat-mar-auto-rel-saude
+
+-   stat-mar-apgar-
+
+-   stat-mar-religiao-
+
+-   education-live-alone-
+
+-   education-auto-rel-saude
+
+-   education-apgar-
+
+-   education-religiao-
+
+-   live-alone-auto-rel-saude
+
+-   live-alone-apgar-
+
+-   live-alone-religiao-
+
+-   auto-rel-saudeapgar-
+
+-   auto-rel-saudereligiao-
+
+-   apgar-religiao
